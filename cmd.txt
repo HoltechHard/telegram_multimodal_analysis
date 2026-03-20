@@ -1,0 +1,54 @@
+==========================================
+|       TELEGRAM MULTIMODAL INGESTION    |
+==========================================
+
+1) Conceptual system architecture
+
+TELEGRAM MULTIMEDIA INGESTION SERVICE        
+
+Telegram Channel
+        ?
+UpdateNewChannelMessage
+        ?
+Message Object
+        ??? media (photo)
+        ??? message (caption)
+                ?
+Extractor Service
+        ??? save image
+        ??? extract caption
+
+
+2) project root 
+
+telegram_post_extraction/
+│
+├── main.py
+│
+├── config/
+│   └── settings.py
+│
+├── core/
+│   ├── telegram_client.py   ✅ lifecycle only
+│   └── message_handler.py   ✅ orchestration
+│
+├── services/
+│   ├── media_downloader.py
+│   ├── ai_client.py
+│   ├── ai_image_transcriber.py
+│   └── multimodal_processor.py
+│
+├── multimedia/
+│
+└── requirements.txt
+
+
+3) Telegram application credentials
+
+app api_id:
+39267127
+
+app api_hash:
+70e3c9edd6e47af7a0fe01ec3600bc7b
+
+
