@@ -1,1 +1,4 @@
-"# telegram_multimodal_analysis" 
+# Telegram Multimodal Analysis  
+  
+Telegram Multimedia Ingestion + AI service  
+
